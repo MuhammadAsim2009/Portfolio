@@ -26,6 +26,3 @@ A single-page personal portfolio website built with HTML, Tailwind CSS, and Java
 - HTML5
 - Tailwind CSS
 - JavaScript (ES6+)
-=======
-
->>>>>>> 5dec4dc7c2df3a400a23acb6d379634466b27442
