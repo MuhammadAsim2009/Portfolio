@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Muhammad Asim's Portfolio
 
 A single-page personal portfolio website built with HTML, Tailwind CSS, and JavaScript.
