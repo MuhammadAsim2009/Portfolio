@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Typing effect for hero tagline
     const typedText = document.getElementById('typed-text');
     const cursor = document.getElementById('cursor');
-    const textToType = "Marketing Manager & Web Developer";
+    const textToType = "Junior Full-Stack Web Developer";
     let charIndex = 0;
 
     function typeText() {
