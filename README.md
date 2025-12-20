@@ -39,37 +39,41 @@ I enjoy learning new technologies, improving my skills, and working on practical
 
 ### 🔹 Emergency Response Management System (ERMS)
 A web-based system designed to manage emergency reports and improve coordination through structured data handling and dashboards.  
-**Technologies:** HTML, CSS, Tailwind CSS, JavaScript, PHP, MySQL
+**Technologies:** HTML, CSS,  Bootstrap, JavaScript, PHP, MySQL
 
 ---
 
 ### 🔹 E-commerce Website
 A multi-category e-commerce platform featuring product listings, user interaction, and a responsive shopping experience.  
 Includes structured layouts, dynamic content handling, and a clean user interface for smooth navigation.  
-**Technologies:** HTML, CSS, Tailwind CSS, JavaScript, PHP, MySQL
+**Technologies:** HTML, CSS, Bootstrap, JavaScript, PHP, MySQL
 
 ---
 
 ### 🔹 School Portal System
 A role-based school management system with admin dashboards and CRUD operations for students, teachers, and courses.  
-**Technologies:** HTML, CSS, Tailwind CSS, JavaScript, PHP, MySQL
+**Technologies:** HTML, CSS, Bootstrap, PHP, MySQL
 
 ---
 
 ### 🔹 Online Notes App
 A secure web application that allows users to register, log in, and manage personal notes through a clean dashboard.  
-**Technologies:** HTML, CSS, Bootstrap, JavaScript, PHP, MySQL
+**Technologies:** HTML, CSS, Bootstrap, PHP, MySQL
 
 ---
 
 ### 🔹 FoodieHub Website
 A modern and responsive restaurant website designed to showcase menus, services, and brand identity.  
-**Technologies:** HTML, CSS, Tailwind CSS, JavaScript
+**Technologies:** HTML, CSS, Bootstrap, JavaScript
 
 ---
 
-## 📬 Contact & Links
-- **GitHub:** https://github.com/MuhammadAsim2009  
+## 📬 Contact & Social Links
+
+- 💼 LinkedIn: https://linkedin.com/in/muhammad-asim-shaikh-360946394
+- 🐙 GitHub: https://github.com/MuhammadAsim2009
+- 📧 Email: sasim4589@gmail.com
+
 
 ---
 
