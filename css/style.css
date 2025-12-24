@@ -351,3 +351,13 @@ h2 {
 html {
     scroll-behavior: smooth;
 }
+
+/* Additional margin for profile image on responsive */
+@media (max-width: 1023px) {
+    .profile-image-container {
+        margin-top: 25rem !important;
+    }
+    .experience-h2 {
+        margin-top: 25rem !important;
+    }
+}
