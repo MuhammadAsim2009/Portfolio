@@ -37,34 +37,27 @@ I enjoy learning new technologies, improving my skills, and working on practical
 
 ## 📂 Featured Projects
 
-### 🔹 Emergency Response Management System (ERMS)
-A web-based system designed to manage emergency reports and improve coordination through structured data handling and dashboards.  
-**Technologies:** HTML, CSS,  Bootstrap, JavaScript, PHP, MySQL
+### 🔹 Vaccination Management System
+A powerful and secure web application that streamlines the immunization process with separate dashboards for admins, hospitals, and parents. It manages vaccine inventory, schedules appointments, and maintains digital records with real-time updates.
+**Technologies:** HTML5, CSS3, JavaScript, Bootstrap, PHP, MySQL
 
 ---
 
-### 🔹 E-commerce Website
-A multi-category e-commerce platform featuring product listings, user interaction, and a responsive shopping experience.  
-Includes structured layouts, dynamic content handling, and a clean user interface for smooth navigation.  
-**Technologies:** HTML, CSS, Bootstrap, JavaScript, PHP, MySQL
+### 🔹 Emergency Response Management System
+A web application for managing emergency requests and response records. It features a secure backend, a responsive user interface, and a focus on performance and reliability.
+**Technologies:** HTML5, CSS3, JavaScript, Bootstrap, PHP, MySQL
 
 ---
 
-### 🔹 School Portal System
-A role-based school management system with admin dashboards and CRUD operations for students, teachers, and courses.  
-**Technologies:** HTML, CSS, Bootstrap, PHP, MySQL
+### 🔹 Smart Shop (E-commerce)
+A web-based e-commerce app simulating a real-world shopping experience. Users can browse products, manage a cart, and place orders, while admins handle products and categories.
+**Technologies:** HTML5, CSS3, JavaScript, Bootstrap, PHP, MySQL
 
 ---
 
-### 🔹 Online Notes App
-A secure web application that allows users to register, log in, and manage personal notes through a clean dashboard.  
-**Technologies:** HTML, CSS, Bootstrap, PHP, MySQL
-
----
-
-### 🔹 FoodieHub Website
-A modern and responsive restaurant website designed to showcase menus, services, and brand identity.  
-**Technologies:** HTML, CSS, Bootstrap, JavaScript
+### 🔹 FoodieHub
+A modern, mobile-first restaurant landing page designed to attract customers. It features interactive menus, reservation systems, and an appetizing UI for a seamless user experience.
+**Technologies:** HTML5, CSS3, Bootstrap, JavaScript (ES6+), Local Storage
 
 ---
 

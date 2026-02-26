@@ -1,830 +1,658 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Asim - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Muhammad Asim | Web Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
-                    fontFamily: {
-                        'poppins': ['Poppins', 'sans-serif'],
-                        'inter': ['Inter', 'sans-serif']
-                    },
                     colors: {
-                        'primary': '#06b6d4',
-                        'primary-light': '#22d3ee',
-                        'primary-dark': '#0891b2',
-                        'dark': '#0f172a',
-                        'dark-light': '#1e293b',
-                        'dark-purple': '#1e1b4b',
-                        'purple': '#3b82f6', 
-                    }
-                }
-            }
+                        "primary": "#00f2ff",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0a0f0f",
+                        "card-dark": "rgba(23, 37, 37, 0.6)",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
         }
     </script>
 </head>
-<body class="bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 font-inter overflow-hidden">
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display selection:bg-primary/30">
     <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 flex flex-wrap justify-center gap-2 sm:gap-6 py-3 z-50 text-white bg-gradient-to-r from-slate-900/90 via-indigo-900/90 to-slate-900/90 backdrop-blur-md border-b border-cyan-500/20 shadow-lg">
-        <a href="#home" class="hover:text-cyan-400 transition-all duration-300 relative group px-4 py-2 rounded-lg hover:bg-cyan-500/10">
-            Home
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#about" class="hover:text-cyan-400 transition-all duration-300 relative group px-4 py-2 rounded-lg hover:bg-cyan-500/10">
-            About
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#experience" class="hover:text-cyan-400 transition-all duration-300 relative group px-4 py-2 rounded-lg hover:bg-cyan-500/10">
-            Experience
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#skills" class="hover:text-cyan-400 transition-all duration-300 relative group px-4 py-2 rounded-lg hover:bg-cyan-500/10">
-            Skills
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#projects" class="hover:text-cyan-400 transition-all duration-300 relative group px-4 py-2 rounded-lg hover:bg-cyan-500/10">
-            Projects
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#contact" class="hover:text-cyan-400 transition-all duration-300 relative group px-4 py-2 rounded-lg hover:bg-cyan-500/10">
-            Contact
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-        </a>
+    <nav class="fixed top-0 w-full z-50 glass border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <div
+                    class="size-8 bg-primary rounded-lg flex items-center justify-center text-background-dark font-black text-xl">
+                    M
+                </div>
+                <span class="text-xl font-bold tracking-tight dark:text-white">Asim<span class="text-primary">.</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#home">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#skills">Skills</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">Projects</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+            </div>
+            <a class="px-6 py-2.5 bg-primary text-background-dark font-bold rounded-lg hover:shadow-[0_0_20px_rgba(0,242,255,0.4)] transition-all active:scale-95"
+                href="#contact">
+                Hire Me
+            </a>
+        </div>
     </nav>
-
-    <!-- Horizontal Sections Container -->
-    <main id="sections" class="flex overflow-hidden h-screen w-[600vw] transition-all duration-1000 ease-out">
-        <!-- Home Section -->
-        <section id="home" class="w-screen scrollable-section flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white pt-16 relative">
-            <!-- Background elements -->
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute top-20 left-10 w-64 h-64 bg-cyan-500/10 rounded-full filter blur-3xl"></div>
-                <div class="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full filter blur-3xl"></div>
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/5 rounded-full filter blur-3xl"></div>
-            </div>
-            
-            <div class="max-w-6xl mx-auto px-6 z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <!-- Profile Image Section -->
-                    <div class="lg:w-1/2 flex justify-center mt-56 lg:mt-0">
-                        <div class="relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-md transform -translate-x-2 translate-y-2"></div>
-                            <div class="relative w-80 h-80 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full border-4 border-cyan-500 shadow-2xl flex items-center justify-center overflow-hidden">
-                                <img src="img/profile_pic.png" alt="Profile Image" class="w-full h-full object-cover rounded-full">
-                            </div>
-                            <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-cyan-500 to-blue-500 p-4 rounded-full border-2 border-slate-900 shadow-lg">
-                                <i class="fas fa-code text-white text-2xl"></i>
-                            </div>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] flex items-center overflow-hidden" id="home">
+            <div class="absolute top-1/4 -left-20 size-96 bg-primary/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 -right-20 size-96 bg-primary/5 rounded-full blur-[120px]"></div>
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="space-y-8 scroll-animate">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Available for Work
+                    </div>
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-7xl font-black leading-[1.1] dark:text-white">
+                            Hi, I'm <br /><span class="gradient-text">Muhammad Asim</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium h-8 md:h-9">
+                            <span id="typed-text"></span><span id="cursor" class="text-primary animate-pulse">|</span>
+                        </p>
+                        <p class="text-lg text-slate-500 dark:text-slate-400 max-w-xl leading-relaxed">I'm a passionate
+                            web developer with hands-on experience in building responsive websites and dynamic web
+                            applications. Currently working as a Web Developer Intern at Tryunity Solutions.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a class="px-8 py-4 bg-primary text-background-dark font-bold rounded-xl flex items-center gap-2 hover:shadow-lg hover:shadow-primary/20 transition-all"
+                            href="#projects">
+                            View Projects
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                        <a class="px-8 py-4 glass-card dark:text-white font-bold rounded-xl border border-white/10 hover:bg-white/5 transition-all inline-block" target="_blank"
+                            download="img/My Resume.pdf" href="img/My Resume.pdf">
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="relative flex justify-center lg:justify-end scroll-animate" style="transition-delay: 200ms;">
+                    <div
+                        class="relative size-72 lg:size-[450px] rounded-2xl overflow-hidden border-2 border-primary/20 p-2 glass">
+                        <div class="w-full h-full rounded-xl bg-cover bg-center"
+                            data-alt="Portrait of Muhammad Asim developer working at desk"
+                            style="background-image: url('img/profile_pic.png')">
                         </div>
                     </div>
-                    
-                    <!-- Content Section -->
-                    <div class="lg:w-1/2 text-center lg:text-left">
-                        <div class="animate-fade-in">
-                            <h1 class="text-5xl lg:text-6xl font-bold font-poppins text-white mb-4 drop-shadow-lg">
-                                Muhammad <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Asim</span>
-                            </h1>
-                            <p class="text-xl lg:text-2xl text-gray-300 mb-6">
-                    <span id="typed-text"></span>
-                    <span id="cursor" class="text-cyan-400 animate-pulse">|</span>
-                </p>
-                            <p class="text-lg text-gray-400 mb-8 leading-relaxed">
-                                I’m a passionate web developer with hands-on experience in building responsive websites and dynamic web applications. Currently working as a Web Developer Intern at Tryunity Solutions.
-                            </p>
-                            
-                            <!-- Action Buttons -->
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                                <a href="#projects" class="group bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-cyan-500/30 transform hover:-translate-y-1">
-                        View Projects
-                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                                <a href="#contact" class="group bg-slate-800/80 hover:bg-slate-700/80 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg border border-cyan-500/30 hover:border-cyan-400 transform hover:-translate-y-1">
-                        Contact Me
-                        <i class="fas fa-envelope ml-2 group-hover:animate-pulse"></i>
-                    </a>
-                </div>
-                
-                <!-- Social links -->
-                            <div class="flex justify-center lg:justify-start space-x-6">
-                                <a href="https://github.com/MuhammadAsim2009" target="_blank" class="text-gray-400 hover:text-gray-600 transition-colors duration-300 transform hover:scale-110">
-                                    <i class="fab fa-github text-2xl"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/muhammad-asim-shaikh-360946394/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 transform hover:scale-110">
-                                    <i class="fab fa-linkedin text-2xl"></i>
-                                </a>
-                                <a href="https://x.com/AsimShaikh971" target="_blank" class="text-gray-400 hover:text-sky-500 transition-colors duration-300 transform hover:scale-110">
-                                    <i class="fab fa-twitter text-2xl"></i>
-                                </a>
-                                <a href="https://instagram.com/asimshaikh971" target="_blank" class="text-gray-400 hover:text-pink-400 transition-colors duration-300 transform hover:scale-110">
-                                    <i class="fab fa-instagram text-2xl"></i>
-                                </a>
-                            </div>
+                    <div
+                        class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl flex items-center gap-4 border border-primary/20">
+                        <div class="size-12 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold dark:text-white">10+</p>
+                            <p class="text-xs text-slate-400 uppercase tracking-tighter">Projects Completed</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- About Section -->
-        <section id="about" class="w-screen scrollable-section bg-gradient-to-br from-slate-800 via-indigo-800 to-slate-800 text-white relative section-hidden">
-            <!-- Background elements -->
-            <div class="absolute inset-0 overflow-hidden opacity-20">
-                <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-600/20 rounded-full filter blur-3xl"></div>
-                <div class="absolute bottom-20 left-10 w-64 h-64 bg-blue-500/20 rounded-full filter blur-3xl"></div>
-            </div>
-            
-            <!-- Sticky Section Title -->
-            <div class="section-title">
-                <div class="max-w-6xl mx-auto px-6">
-                    <h2 class="text-4xl font-bold font-poppins text-center relative">
-                    About Me
-                        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></span>
-                </h2>
-                </div>
-            </div>
-            
-            <div class="max-w-6xl mx-auto px-6 z-10 pb-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <!-- Profile Image -->
-                    <div class="flex justify-center">
-                        <div class="relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-md transform -translate-x-2 translate-y-2"></div>
-                            <div class="relative w-80 h-80 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full border-4 border-cyan-500 shadow-2xl flex items-center justify-center overflow-hidden">
-                                <img src="img/profile_pic.png" alt="Profile Image" class="w-full h-full object-cover rounded-full">
+        <section class="py-24 relative bg-background-light dark:bg-[#080d0d]" id="about">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center scroll-animate">
+                    <div class="order-2 md:order-1 space-y-6">
+                        <div class="space-y-2">
+                            <h3 class="text-primary font-bold uppercase tracking-widest text-sm">Discovery</h3>
+                            <h2 class="text-4xl font-black dark:text-white">About Me</h2>
+                        </div>
+                        <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed">I'm a passionate web
+                            developer with hands-on experience in building responsive websites and dynamic web
+                            applications. I focus on creating seamless user experiences and robust backend systems.</p>
+                        <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed">Currently, I am honing my
+                            skills as a Web Developer Intern at Tryunity Solutions, where I contribute to real-world
+                            projects and collaborate with experienced developers to deliver high-quality web solutions.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="p-4 rounded-xl glass-card">
+                                <i class="fa-solid fa-location-dot text-primary mb-2"></i>
+                                <h4 class="font-bold dark:text-white">Location</h4>
+                                <p class="text-sm text-slate-400">Sindh, Pakistan</p>
                             </div>
-                            <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-cyan-500 to-blue-500 p-4 rounded-full border-2 border-slate-900 shadow-lg">
-                                <i class="fas fa-code text-white text-2xl"></i>
+                            <div class="p-4 rounded-xl glass-card">
+                                <i class="fa-solid fa-graduation-cap text-primary mb-2"></i>
+                                <h4 class="font-bold dark:text-white">Education</h4>
+                                <p class="text-sm text-slate-400">Aptech Larkana</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- About Content -->
-                    <div class="space-y-6">
-                        <!-- Personal Information Card -->
-                        <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-700">
-                            <h3 class="text-2xl font-semibold font-poppins mb-6 text-cyan-400">Personal Information</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-center">
-                                    <i class="fas fa-map-marker-alt text-cyan-400 w-6"></i>
-                                    <span class="font-semibold text-cyan-400 mr-3">Country:</span>
-                                    <span class="text-gray-300">Pakistan</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-city text-cyan-400 w-6"></i>
-                                    <span class="font-semibold text-cyan-400 mr-3">City:</span>
-                                    <span class="text-gray-300">Larkana</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-graduation-cap text-cyan-400 w-6"></i>
-                                    <span class="font-semibold text-cyan-400 mr-3">Education:</span>
-                                    <span class="text-gray-300">Studying at Aptech Larkana</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-briefcase text-cyan-400 w-6"></i>
-                                    <span class="font-semibold text-cyan-400 mr-3">Experience:</span>
-                                    <span class="text-gray-300">Internship & Web Projects</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-laptop-code text-cyan-400 w-6"></i>
-                                    <span class="font-semibold text-cyan-400 mr-3">Development:</span>
-                                    <span class="text-gray-300">Frontend & Backend Development</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-building text-cyan-400 w-6"></i>
-                                    <span class="font-semibold text-cyan-400 mr-3">Internship:</span>
-                                    <span class="text-gray-300">Tryunity Solution software house</span>
-                                </div>
-                                </div>
+                    <div class="order-1 md:order-2 flex justify-center">
+                        <div
+                            class="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden glass-card p-4 border border-primary/10">
+                            <div class="w-full h-full rounded-2xl bg-cover bg-center"
+                                data-alt="High-tech workspace with multiple monitors showing code"
+                                style="background-image: url('img/profile_pic.png')">
                             </div>
-
-                        <!-- About Me Card -->
-                        <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-700">
-                            <h3 class="text-2xl font-semibold font-poppins mb-4 text-cyan-400">About Me</h3>
-                            <p class="text-gray-300 leading-relaxed border-l-2 border-cyan-500 pl-4 italic">
-                                I am a passionate and curious web developer, dedicated to creating efficient and user-friendly web solutions. 
-                                I enjoy exploring new technologies and continuously improving my skills to build projects that make a meaningful impact. 
-                                I thrive in collaborative environments and love solving problems with creativity and precision.
-                            </p>
-                        </div>
-                        
-                        <!-- Professional Journey Card -->
-                        <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-700">
-                            <h3 class="text-2xl font-semibold font-poppins mb-4 text-cyan-400">Professional Journey</h3>
-                            <p class="text-gray-300 leading-relaxed mb-4">
-                                <b>2025 – Present:</b> Web Developer Intern at Tryunity Solutions
-                                <br>
-                                <b>2025:</b> School Portal System & E-commerce Website projects
-                                <br>
-                                <b>2024:</b> Mini web projects (Clock, Calculator, Notes App)
-                                <br>
-                                <b>2024:</b> Started full-stack development learning (HTML, CSS, JS, PHP, MySQL)
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="w-screen scrollable-section flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white relative section-hidden">
-            <!-- Background elements -->
-            <div class="absolute inset-0 overflow-hidden opacity-20">
-                <div class="absolute top-40 left-20 w-72 h-72 bg-cyan-600/20 rounded-full filter blur-3xl"></div>
-                <div class="absolute bottom-40 right-20 w-64 h-64 bg-blue-500/20 rounded-full filter blur-3xl"></div>
-            </div>
-            
-            <div class="max-w-6xl mx-auto px-6 z-10">
-                <h2 class="text-4xl font-bold font-poppins text-center mb-12 relative experience-h2">
-                    Experience
-                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></span>
-                </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-4 rounded-xl mr-4">
-                                <i class="fas fa-chart-line text-cyan-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-semibold font-poppins">Professional Development</h3>
-                                <p class="text-cyan-400 text-sm">Self-Guided Learning</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-6 leading-relaxed">Focused on improving coding skills, problem-solving, and collaboration. Continuously learning modern web development practices to become a well-rounded and adaptable developer.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-slate-700 text-cyan-400 px-3 py-1 rounded-full text-sm">Problem-Solving</span>
-                            <span class="bg-slate-700 text-cyan-400 px-3 py-1 rounded-full text-sm">Team Collaboration</span>
-                            <span class="bg-slate-700 text-cyan-400 px-3 py-1 rounded-full text-sm">Continuous Learning</span>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-4 rounded-xl mr-4">
-                                <i class="fas fa-laptop-code text-cyan-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-semibold font-poppins">Intern Developer</h3>
-                                <p class="text-cyan-400 text-sm">Tryunity Solution</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-6 leading-relaxed">Working on real-world frontend and backend web development projects, gaining hands-on experience with modern technologies.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-slate-700 text-cyan-400 px-3 py-1 rounded-full text-sm">Frontend Development</span>
-                            <span class="bg-slate-700 text-cyan-400 px-3 py-1 rounded-full text-sm">Backend Systems</span>
-                            <span class="bg-slate-700 text-cyan-400 px-3 py-1 rounded-full text-sm">Web Apps</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Skills Section -->
-        <section id="skills" class="w-screen scrollable-section bg-gradient-to-br from-slate-800 via-indigo-800 to-slate-800 text-white relative section-hidden">
-            <!-- Background elements -->
-            <div class="absolute inset-0 overflow-hidden opacity-20">
-                <div class="absolute top-40 right-20 w-72 h-72 bg-cyan-600/20 rounded-full filter blur-3xl"></div>
-                <div class="absolute bottom-40 left-20 w-64 h-64 bg-blue-500/20 rounded-full filter blur-3xl"></div>
-            </div>
-            
-            <!-- Sticky Section Title -->
-            <div class="section-title">
-                <div class="max-w-6xl mx-auto px-6">
-                    <h2 class="text-4xl font-bold font-poppins text-center relative">
-                    Skills
-                        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></span>
-                </h2>
+        <section class="py-24 bg-background-light dark:bg-background-dark" id="skills">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16 space-y-4 scroll-animate">
+                    <h2 class="text-4xl font-black dark:text-white">Technical Skills</h2>
+                    <p class="text-slate-500 dark:text-slate-400">My technical toolkit is constantly expanding as I
+                        explore new technologies and best practices.</p>
                 </div>
-            </div>
-                
-            <div class="max-w-6xl mx-auto px-6 z-10 pb-8">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fa-brands fa-html5 text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">HTML</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[90%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">90%</p>
+                <div class="grid md:grid-cols-3 gap-8 scroll-animate" style="transition-delay: 200ms;">
+                    <!-- Frontend -->
+                    <div class="glass-card p-8 rounded-2xl space-y-6">
+                        <div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                            <i class="fa-solid fa-laptop-code text-3xl"></i>
                         </div>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fa-brands fa-css3-alt text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">CSS</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[85%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">85%</p>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fa-solid fa-wind text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">Tailwind CSS</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[80%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">80%</p>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fa-brands fa-js text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">JavaScript</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[75%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">75%</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fas fa-mobile-screen-button text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">Responsive Design</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[75%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">75%</p>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fa-brands fa-bootstrap text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">Bootstrap</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[85%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">85%</p>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fa-solid fa-code text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">jQuery</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[70%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">70%</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fab fa-php text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">PHP</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[85%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">85%</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fas fa-database text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">MySQL</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[75%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">75%</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fas fa-server text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">Database Design</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[70%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">70%</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fab fa-git-alt text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">Git</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[85%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">85%</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="text-center">
-                            <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                <i class="fab fa-github text-3xl text-cyan-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold font-poppins mb-2">GitHub</h3>
-                            <div class="w-full bg-slate-700 h-2 rounded-full mt-3 mb-1">
-                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full w-[80%]"></div>
-                            </div>
-                            <p class="text-gray-400 text-xs">80%</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Additional Skills Information -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-700">
-                        <h3 class="text-2xl font-semibold font-poppins mb-6 text-cyan-400">Frontend Technologies</h3>
+                        <h3 class="text-xl font-bold dark:text-white">Frontend Dev</h3>
                         <div class="space-y-4">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-300">HTML</span>
-                                <span class="text-cyan-400 font-semibold">90%</span>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm"><span
+                                        class="dark:text-slate-300">HTML/CSS</span><span class="text-primary">95%</span>
+                                </div>
+                                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[95%]"></div>
+                                </div>
                             </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-300">CSS3</span>
-                                <span class="text-cyan-400 font-semibold">85%</span>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm"><span
+                                        class="dark:text-slate-300">JavaScript</span><span
+                                        class="text-primary">85%</span></div>
+                                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[85%]"></div>
+                                </div>
                             </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-300">Tailwind CSS</span>
-                                <span class="text-cyan-400 font-semibold">80%</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-300">JavaScript ES6+</span>
-                                <span class="text-cyan-400 font-semibold">75%</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-300">Responsive Design</span>
-                                <span class="text-cyan-400 font-semibold">75%</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-300">Bootstrap</span>
-                                <span class="text-cyan-400 font-semibold">85%</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-300">jQuery</span>
-                                <span class="text-cyan-400 font-semibold">70%</span>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm"><span
+                                        class="dark:text-slate-300">Tailwind/Bootstrap</span><span
+                                        class="text-primary">90%</span></div>
+                                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[90%]"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="flex flex-col gap-8">
-                        <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-700">
-                            <h3 class="text-2xl font-semibold font-poppins mb-6 text-cyan-400">Backend & Database</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-gray-300">PHP</span>
-                                    <span class="text-cyan-400 font-semibold">85%</span>
+                    <!-- Backend -->
+                    <div class="glass-card p-8 rounded-2xl space-y-6">
+                        <div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                            <i class="fa-solid fa-database text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold dark:text-white">Backend &amp; DB</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm"><span
+                                        class="dark:text-slate-300">PHP</span><span class="text-primary">85%</span>
                                 </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-gray-300">MySQL</span>
-                                    <span class="text-cyan-400 font-semibold">75%</span>
+                                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[85%]"></div>
                                 </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-gray-300">Database Design</span>
-                                    <span class="text-cyan-400 font-semibold">70%</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm"><span 
+                                    class="dark:text-slate-300">MySQL</span><span class="text-primary">80%</span></div>
+                                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[80%]"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm"><span
+                                        class="dark:text-slate-300">Database Design</span><span class="text-primary">75%</span>
+                                </div>
+                                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[75%]"></div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-700">
-                            <h3 class="text-2xl font-semibold font-poppins mb-6 text-cyan-400">Version Control</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-gray-300">Git</span>
-                                    <span class="text-cyan-400 font-semibold">85%</span>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-gray-300">GitHub</span>
-                                    <span class="text-cyan-400 font-semibold">80%</span>
+                    </div>
+                    <!-- Tools -->
+                    <div class="glass-card p-8 rounded-2xl space-y-6">
+                        <div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                            <i class="fa-solid fa-lightbulb text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold dark:text-white">Other Skills</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm"><span class="dark:text-slate-300">Git /
+                                        GitHub</span><span class="text-primary">90%</span></div>
+                                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[90%]"></div>
                                 </div>
                             </div>
-                        </div>   
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm"><span class="dark:text-slate-300">VS
+                                        Code</span><span class="text-primary">95%</span></div>
+                                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[95%]"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm"><span class="dark:text-slate-300">Problem
+                                        Solving</span><span class="text-primary">80%</span></div>
+                                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary w-[80%]"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
         </section>
-
         <!-- Projects Section -->
-        <section id="projects" class="w-screen scrollable-section bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white relative section-hidden">
-            <!-- Background elements -->
-            <div class="absolute inset-0 overflow-hidden opacity-20">
-                <div class="absolute top-20 left-20 w-80 h-80 bg-cyan-600/20 rounded-full filter blur-3xl"></div>
-                <div class="absolute bottom-20 right-20 w-72 h-72 bg-blue-500/20 rounded-full filter blur-3xl"></div>
-            </div>
-            
-            <!-- Sticky Section Title -->
-            <div class="section-title">
-                <div class="max-w-6xl mx-auto px-6">
-                    <h2 class="text-4xl font-bold font-poppins text-center relative">
-                    Projects
-                        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></span>
-                </h2>
+        <section class="py-24 bg-background-light dark:bg-[#080d0d]" id="projects">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 scroll-animate">
+                    <div class="space-y-4">
+                        <h3 class="text-primary font-bold uppercase tracking-widest text-sm">Portfolio</h3>
+                        <h2 class="text-4xl font-black dark:text-white">Featured Projects</h2>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-sm">A collection of systems and applications I've
+                        developed during my journey at Aptech.</p>
                 </div>
-            </div>
-            
-            <div class="max-w-6xl mx-auto px-6 z-10 pb-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-slate-700 to-slate-800">
-                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-70"></div>
-                            <img src="img/ERMS.jpg" alt="ERMS" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 scroll-animate" style="transition-delay: 200ms;">
+                    <!-- Project 1 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group project-card-trigger cursor-pointer">
+                        <div class="aspect-video bg-cover bg-center overflow-hidden"
+                            data-alt="Vaccination Management System dashboard interface"
+                            style="background-image: url('img/VMS.png')">
+                            <div
+                                class="w-full h-full bg-background-dark/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4"><button
+                                    class="p-3 bg-primary text-background-dark rounded-full"><i
+                                        class="fa-solid fa-link"></i></button><button
+                                    class="p-3 bg-white/20 text-white rounded-full backdrop-blur"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold font-poppins mb-3 group-hover:text-cyan-400 transition-colors duration-300">Emergency Response Management System (ERMS)</h3>
-                            <p class="text-gray-300 mb-4">A web-based system designed to manage emergency reports and improve coordination through structured data handling and dashboards.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">HTML</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">CSS</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">Bootstrap</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">PHP</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">MySQL</span>
+                        <div class="p-8 space-y-4">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">Frontend Stack Tech</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">PHP</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">MySQL</span>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <a href="#" class="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/30">View Project</a>
-                                <div class="flex space-x-2">
-                                    <a href="#" class="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300">
-                                        <i class="fa-brands fa-github text-white"></i>
-                                    </a>
-                                    <a href="#" class="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300">
-                                        <i class="fa-solid fa-external-link-alt text-white"></i>
-                                    </a>
-                                </div>
-                            </div>
+                            <h3 class="text-2xl font-bold dark:text-white">Vaccination Management System</h3>
+                            <p class="text-slate-500 dark:text-slate-400">A comprehensive platform with dedicated panels
+                                for Admins, Hospitals, and Parents to track and manage vaccinations.</p>
                         </div>
                     </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-slate-700 to-slate-800">
-                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-70"></div>
-                            <img src="img/E-commerce.jpg" alt="E-commerce Website" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                    <!-- Project 2 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group project-card-trigger cursor-pointer">
+                        <div class="aspect-video bg-cover bg-center overflow-hidden"
+                            data-alt="School Portal System administrative dashboard"
+                            style="background-image: url('img/ERMS.png')">
+                            <div
+                                class="w-full h-full bg-background-dark/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4"><button
+                                    class="p-3 bg-primary text-background-dark rounded-full"><i
+                                        class="fa-solid fa-link"></i></button><button
+                                    class="p-3 bg-white/20 text-white rounded-full backdrop-blur"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold font-poppins mb-3 group-hover:text-cyan-400 transition-colors duration-300">E-commerce Website</h3>
-                            <p class="text-gray-300 mb-4">A multi-category e-commerce platform featuring product listings, user interaction, secure flows, and a responsive shopping experience.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">HTML</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">CSS</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">JavaScript</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">Bootstrap</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">PHP</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-3 py-1 rounded-full">MySQL</span>
+                        <div class="p-8 space-y-4">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">Frontend Stack Tech</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">PHP</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">MySQL</span>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <a href="#" class="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/30">View Project</a>
-                                <div class="flex space-x-2">
-                                    <a href="#" class="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300">
-                                        <i class="fa-brands fa-github text-white"></i>
-                                    </a>
-                                    <a href="#" class="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300">
-                                        <i class="fa-solid fa-external-link-alt text-white"></i>
-                                    </a>
-                                </div>
-                            </div>
+                            <h3 class="text-2xl font-bold dark:text-white">Emergency Response Management System</h3>
+                            <p class="text-slate-500 dark:text-slate-400">A web application to manage emergency requests and response 
+                                records. The system focuses on secure backend and responsive UI.</p>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Additional Projects -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="relative overflow-hidden h-32 bg-gradient-to-br from-slate-700 to-slate-800">
-                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-70"></div>
-                            <img src="img/School_Portal_System.jpg" alt="School Portal System" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold font-poppins mb-2 group-hover:text-cyan-400 transition-colors duration-300">School Portal System</h3>
-                            <p class="text-gray-300 text-sm mb-3">A role-based school management system with admin dashboards and CRUD operations for students, teachers, and courses.</p>
-                            <div class="flex flex-wrap gap-1 mb-3">
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">HTML</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">CSS</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">Bootstrap</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">PHP</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">MySQL</span>
+                    <!-- Project 3 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group project-card-trigger cursor-pointer">
+                        <div class="aspect-video bg-cover bg-center overflow-hidden"
+                            data-alt="FoodieHub restaurant website layout"
+                            style="background-image: url('img/E-commerce.png')">
+                            <div class="w-full h-full bg-background-dark/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                                <button class="p-3 bg-primary text-background-dark rounded-full"><i class="fa-solid fa-link"></i></button>
+                                <button class="p-3 bg-white/20 text-white rounded-full backdrop-blur"><i class="fa-solid fa-eye"></i></button>
                             </div>
-                            <a href="#" class="text-cyan-400 text-sm hover:text-cyan-300 transition-colors duration-300">View Details →</a>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">Frontend Stack Tech</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">PHP</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">MySQL</span>
+                            </div>
+                            <h3 class="text-2xl font-bold dark:text-white">Smart Shop</h3>
+                            <p class="text-slate-500 dark:text-slate-400">A web-based e-commerce app where users can 
+                                browse products, manage a cart, and place orders through a clean interface.</p>
                         </div>
                     </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="relative overflow-hidden h-32 bg-gradient-to-br from-slate-700 to-slate-800">
-                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-70"></div>
-                            <img src="img/Online_Notes_App.jpg" alt="Online Notes App" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold font-poppins mb-2 group-hover:text-cyan-400 transition-colors duration-300">Online Notes App</h3>
-                            <p class="text-gray-300 text-sm mb-3">A secure web application that allows users to register, log in, and manage personal notes through a simple dashboard.</p>
-                            <div class="flex flex-wrap gap-1 mb-3">
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">HTML</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">CSS</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">Bootstrap</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">PHP</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">MySQL</span>
+                    <!-- Project 4 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group project-card-trigger cursor-pointer">
+                        <div class="aspect-video bg-cover bg-center overflow-hidden"
+                            data-alt="A collection of mini utility apps like calculator and clock"
+                            style="background-image: url('img/FoodieHub.png')">
+                            <div
+                                class="w-full h-full bg-background-dark/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4"><button
+                                    class="p-3 bg-primary text-background-dark rounded-full"><i
+                                        class="fa-solid fa-link"></i></button><button
+                                    class="p-3 bg-white/20 text-white rounded-full backdrop-blur"><i
+                                        class="fa-solid fa-eye"></i></button>
                             </div>
-                            <a href="#" class="text-cyan-400 text-sm hover:text-cyan-300 transition-colors duration-300">View Details →</a>
                         </div>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105 border border-slate-700 group">
-                        <div class="relative overflow-hidden h-32 bg-gradient-to-br from-slate-700 to-slate-800">
-                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-70"></div>
-                            <img src="img/FoodieHub.jpg" alt="FoodieHub Website" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold font-poppins mb-2 group-hover:text-cyan-400 transition-colors duration-300">FoodieHub Website</h3>
-                            <p class="text-gray-300 text-sm mb-3">A modern and responsive restaurant website designed to showcase menus, services, and brand identity.</p>
-                            <div class="flex flex-wrap gap-1 mb-3">
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">HTML</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">CSS</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">JavaScript</span>
-                                <span class="bg-slate-700 text-cyan-400 text-xs px-2 py-1 rounded-full">Bootstrap</span>
+                        <div class="p-8 space-y-4">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">HTML/CSS</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">JavaScript</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">Bootstrap</span>
                             </div>
-                            <a href="#" class="text-cyan-400 text-sm hover:text-cyan-300 transition-colors duration-300">View Details →</a>
+                            <h3 class="text-2xl font-bold dark:text-white">FoodieHub</h3>
+                            <p class="text-slate-500 dark:text-slate-400">A vibrant and responsive restaurant landing
+                                page built with modern frontend tools to showcase menus and bookings.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Experience & Education -->
+        <section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 scroll-animate">
+                    <div class="space-y-8">
+                        <h2 class="text-4xl font-black dark:text-white flex items-center gap-4">
+                            <i class="fa-solid fa-briefcase text-primary text-4xl"></i>
+                            Experience
+                        </h2>
+                        <div class="space-y-6 relative before:absolute before:left-8 before:top-2 before:bottom-2 before:w-px before:bg-primary/20">
+                            <div class="relative pl-20 group">
+                                <div class="absolute left-6 top-2 size-4 rounded-full bg-primary ring-8 ring-primary/10 group-hover:scale-125 transition-transform">
+                                </div>
+                                <div class="glass-card p-6 rounded-xl">
+                                    <span class="text-primary text-xs font-bold">2025 - Present</span>
+                                    <h4 class="text-lg font-bold dark:text-white mt-1">Intern Web Developer</h4>
+                                    <p class="text-slate-400 text-sm">TryUnity Solutions</p>
+                                    <p class="text-slate-500 mt-2 text-sm">Working on real-world projects, assisting in
+                                        frontend and backend development and debugging.</p>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="w-screen scrollable-section min-h-screen overflow-y-auto py-20 bg-gradient-to-br from-slate-800 via-indigo-800 to-slate-800 text-white relative section-hidden">
-            <!-- Background elements -->
-            <div class="absolute inset-0 overflow-hidden opacity-20">
-                <div class="absolute top-40 left-40 w-72 h-72 bg-cyan-600/20 rounded-full filter blur-3xl"></div>
-                <div class="absolute bottom-40 right-40 w-64 h-64 bg-blue-500/20 rounded-full filter blur-3xl"></div>
-            </div>
-            
-            <!-- Sticky Section Title -->
-            <div class="section-title">
-                <div class="max-w-6xl mx-auto px-6">
-                    <h2 class="text-4xl font-bold font-poppins text-center relative">
-                    Contact Me
-                        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></span>
-                </h2>
+                        <div class="space-y-6 relative before:absolute before:left-8 before:top-2 before:bottom-2 before:w-px before:bg-primary/20">
+                            <div class="relative pl-20 group">
+                                <div class="absolute left-6 top-2 size-4 rounded-full bg-primary ring-8 ring-primary/10 group-hover:scale-125 transition-transform">
+                                </div>
+                                <div class="glass-card p-6 rounded-xl">
+                                    <span class="text-primary text-xs font-bold">2025 - Present</span>
+                                    <h4 class="text-lg font-bold dark:text-white mt-1">Professional Development</h4>
+                                    <p class="text-slate-400 text-sm">Self-Guided Learning</p>
+                                    <p class="text-slate-500 mt-2 text-sm">Focused on improving coding skills, problem-solving, 
+                                        and continuously learning web development.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="space-y-8">
+                        <h2 class="text-4xl font-black dark:text-white flex items-center gap-4">
+                            <i class="fa-solid fa-graduation-cap text-primary text-4xl"></i>
+                            Education
+                        </h2>
+                        <div class="space-y-6 relative before:absolute before:left-8 before:top-2 before:bottom-2 before:w-px before:bg-primary/20">
+                            <div class="relative pl-20 group">
+                                <div class="absolute left-6 top-2 size-4 rounded-full bg-primary ring-8 ring-primary/10 group-hover:scale-125 transition-transform">
+                                </div>
+                                <div class="glass-card p-6 rounded-xl">
+                                    <span class="text-primary text-xs font-bold">2025 - Present</span>
+                                    <h4 class="text-lg font-bold dark:text-white mt-1">PHP & Backend Development</h4>
+                                    <p class="text-slate-400 text-sm">Aptech Larkana</p>
+                                    <p class="text-slate-500 mt-2 text-sm">Learning PHP, MySQL, and backend fundamentals for building dynamic web applications.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6 relative before:absolute before:left-8 before:top-2 before:bottom-2 before:w-px before:bg-primary/20">
+                            <div class="relative pl-20 group">
+                                <div class="absolute left-6 top-2 size-4 rounded-full bg-primary ring-8 ring-primary/10 group-hover:scale-125 transition-transform">
+                                </div>
+                                <div class="glass-card p-6 rounded-xl">
+                                    <span class="text-primary text-xs font-bold">2025 - Present</span>
+                                    <h4 class="text-lg font-bold dark:text-white mt-1">Intermediate / High School</h4>
+                                    <p class="text-slate-400 text-sm">Govt: Boys Degree College Larkana</p>
+                                    <p class="text-slate-500 mt-2 text-sm">Currently pursuing Intermediate education focusing on analytical thinking and critical problem-solving skills.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-                
-            <div class="max-w-6xl mx-auto px-6 z-10 pb-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-slate-700">
-                        <form id="contactForm" class="space-y-5">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                        <i class="fa-solid fa-user text-slate-500"></i>
-                                    </div>
-                                    <input type="text" id="name" name="name" class="w-full pl-10 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300" placeholder="Your name">
-                                </div>
-                                <span id="nameError" class="text-red-500 text-xs hidden mt-1">Please enter your name</span>
+        </section>
+        <!-- Contact Section -->
+        <section class="py-24 relative bg-background-light dark:bg-[#080d0d]" id="contact">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="glass rounded-[2.5rem] p-8 lg:p-16 border border-primary/10 relative overflow-hidden scroll-animate">
+                    <div class="absolute -top-24 -right-24 size-64 bg-primary/10 rounded-full blur-3xl"></div>
+                    <div class="grid lg:grid-cols-2 gap-16 items-start relative z-10">
+                        <div class="space-y-8">
+                            <div class="space-y-4">
+                                <h2 class="text-5xl font-black dark:text-white">Let's build <br /><span
+                                        class="text-primary">something great.</span></h2>
+                                <p class="text-slate-400 max-w-md">I am currently open for internships and freelance
+                                    projects. Let's connect and discuss how I can help your team.</p>
                             </div>
-                            
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                        <i class="fa-solid fa-envelope text-slate-500"></i>
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-6">
+                                    <div
+                                        class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                                        <i class="fa-solid fa-envelope"></i>
                                     </div>
-                                    <input type="email" id="email" name="email" class="w-full pl-10 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300" placeholder="your.email@example.com">
-                                </div>
-                                <span id="emailError" class="text-red-500 text-xs hidden mt-1">Please enter a valid email address</span>
-                            </div>
-                            
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                                <div class="relative">
-                                    <div class="absolute top-3 left-0 flex items-start pl-3 pointer-events-none">
-                                        <i class="fa-solid fa-message text-slate-500"></i>
+                                    <div>
+                                        <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Email Me
+                                        </p>
+                                        <a href="mailto:sasim4589@gmail.com" class="text-lg font-bold dark:text-white">sasim4589@gmail.com</a>
                                     </div>
-                                    <textarea id="message" name="message" rows="5" class="w-full pl-10 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300" placeholder="Your message here..."></textarea>
                                 </div>
-                                <span id="messageError" class="text-red-500 text-xs hidden mt-1">Please enter your message</span>
+                                <div class="flex items-center gap-6">
+                                    <div
+                                        class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                                        <i class="fa-brands fa-github"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">GitHub</p>
+                                        <a class="text-lg font-bold dark:text-white hover:text-primary transition-colors"
+                                            href="https://github.com/MuhammadAsim2009"
+                                            target="_blank">MuhammadAsim2009</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-6">
+                                    <div
+                                        class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Location</p>
+                                        <a href="https://www.google.com/maps/place/Dari+Muhalla+Larkana,+Pakistan/@27.5473293,68.2065658,15z/data=!3m1!4b1!4m6!3m5!1s0x3935a95f908f251d:0x1fa42b287bef78a7!8m2!3d27.5473111!4d68.2168656!16s%2Fg%2F11rx212rlz?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-lg font-bold dark:text-white hover:text-primary transition-colors">Larkana, Pakistan</a>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <button type="submit" id="successMessage" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/30 flex items-center justify-center">
-                                <i class="fa-solid fa-paper-plane mr-2"></i>
+                        </div>
+                        <form class="glass-card p-8 rounded-3xl border border-white/5 space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-slate-400">Your Name</label>
+                                    <input
+                                        class="w-full bg-background-dark/50 border-white/10 rounded-xl px-4 py-3 focus:border-primary focus:ring-0 text-white transition-all"
+                                        placeholder="John Doe" type="text" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-slate-400">Your Email</label>
+                                    <input
+                                        class="w-full bg-background-dark/50 border-white/10 rounded-xl px-4 py-3 focus:border-primary focus:ring-0 text-white transition-all"
+                                        placeholder="john@example.com" type="email" />
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-400">Subject</label>
+                                <input
+                                    class="w-full bg-background-dark/50 border-white/10 rounded-xl px-4 py-3 focus:border-primary focus:ring-0 text-white transition-all"
+                                    placeholder="Project Inquiry" type="text" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-400">Message</label>
+                                <textarea
+                                    class="w-full bg-background-dark/50 border-white/10 rounded-xl px-4 py-3 focus:border-primary focus:ring-0 text-white transition-all"
+                                    placeholder="How can I help you?" rows="4"></textarea>
+                            </div>
+                            <button
+                                class="w-full py-4 bg-primary text-background-dark font-black rounded-xl hover:shadow-[0_0_30px_rgba(0,242,255,0.4)] transition-all">
                                 Send Message
                             </button>
                         </form>
-                    </div>
-                    
-                    <div class="flex flex-col justify-center">
-                        <div class="mb-8 bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-700">
-                            <h3 class="text-2xl font-semibold font-poppins mb-4 text-cyan-400">Get in Touch</h3>
-                            <p class="text-gray-300 mb-6">Feel free to reach out to me for any questions or opportunities! I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                            
-                            <div class="space-y-5">
-                                <div class="flex items-center group">
-                                    <div class="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center mr-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                        <i class="fa-solid fa-envelope text-cyan-400 text-xl"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-gray-400">Email</p>
-                                        <a href="/cdn-cgi/l/email-protection#780b190b11154c4d4041381f15191114561b1715" class="text-gray-200 hover:text-cyan-400 transition-colors duration-300"><span class="__cf_email__" data-cfemail="a7d4c6d4ceca93929f9ee7c0cac6cecb89c4c8ca">[email&#160;protected]</span></a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center group">
-                                    <div class="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center mr-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                        <i class="fa-brands fa-github text-cyan-400 text-xl"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-gray-400">GitHub</p>
-                                        <a href="https://github.com/MuhammadAsim2009" target="_blank" class="text-gray-200 hover:text-cyan-400 transition-colors duration-300">github.com/MuhammadAsim2009</a>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center group">
-                                    <div class="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center mr-4 group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
-                                        <i class="fa-solid fa-location-dot text-cyan-400 text-xl"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-gray-400">Location</p>
-                                        <a href="https://www.google.com/maps/place/Dari+Muhalla+Larkana,+Pakistan/@27.5473293,68.2065658,15z/data=!3m1!4b1!4m6!3m5!1s0x3935a95f908f251d:0x1fa42b287bef78a7!8m2!3d27.5473111!4d68.2168656!16s%2Fg%2F11rx212rlz?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-gray-200 hover:text-cyan-400 transition-colors duration-300">Larkana, Pakistan</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-center space-x-4">
-                            <a href="https://www.linkedin.com/in/muhammad-asim-shaikh-360946394" target="_blank" class="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center hover:from-cyan-500/20 hover:to-blue-500/20 transition-all duration-300 hover:scale-110">
-                                <i class="fa-brands fa-linkedin-in text-cyan-400 text-xl"></i>
-                            </a>
-                            <a href="https://x.com/AsimShaikh971" target="_blank" class="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center hover:from-cyan-500/20 hover:to-blue-500/20 transition-all duration-300 hover:scale-110">
-                                <i class="fa-brands fa-twitter text-cyan-400 text-xl"></i>
-                            </a>
-                            <a href="https://instagram.com/asimshaikh971" target="_blank" class="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center hover:from-cyan-500/20 hover:to-blue-500/20 transition-all duration-300 hover:scale-110">
-                                <i class="fa-brands fa-instagram text-cyan-400 text-xl"></i>
-                            </a>
-                            <a href="https://wa.me/+923323230869" target="_blank" class="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center hover:from-cyan-500/20 hover:to-blue-500/20 transition-all duration-300 hover:scale-110">
-                                <i class="fa-brands fa-whatsapp text-cyan-400 text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Additional Contact Information -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-700 text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa-solid fa-clock text-cyan-400 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold font-poppins mb-2 text-cyan-400">Response Time</h3>
-                        <p class="text-gray-300">I typically respond to emails within 24 hours. For urgent matters, feel free to reach out via social media.</p>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-700 text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa-solid fa-globe text-cyan-400 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold font-poppins mb-2 text-cyan-400">Availability</h3>
-                        <p class="text-gray-300">Available for freelance projects, collaborations, and full-time opportunities. Open to remote work.</p>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-700 text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa-solid fa-handshake text-cyan-400 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold font-poppins mb-2 text-cyan-400">Let's Connect</h3>
-                        <p class="text-gray-300">Interested in working together? Let's discuss how we can bring your ideas to life with modern web technologies.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <!-- Footer -->
+    <footer class="py-12 bg-background-light dark:bg-background-dark border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Top Footer Area -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12">
+                <!-- Column 1: Brand -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="size-8 bg-primary rounded-lg flex items-center justify-center text-background-dark font-black text-xl">
+                            M</div>
+                        <span class="text-xl font-bold dark:text-white tracking-tight">Asim<span
+                                class="text-primary">.</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Building high-performance, user-centric web applications with modern technologies and a focus on
+                        clean code.
+                    </p>
+                    <a class="inline-flex items-center gap-2 text-primary text-sm font-bold hover:gap-3 transition-all"
+                        href="#home">
+                        Back to Top <i class="fa-solid fa-arrow-up text-sm"></i>
+                    </a>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#home">Home</a>
+                        </li>
+                        <li><a class="text-slate-400 hover:text-primary text-sm transition-colors" href="#about">About
+                                Me</a></li>
+                        <li><a class="text-slate-400 hover:text-primary text-sm transition-colors"
+                                href="#skills">Skills</a></li>
+                        <li><a class="text-slate-400 hover:text-primary text-sm transition-colors"
+                                href="#projects">Projects</a></li>
+                        <li><a class="text-slate-400 hover:text-primary text-sm transition-colors"
+                                href="#contact">Experience</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact Info -->
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-400 text-sm">
+                            <a href="mailto:sasim4589@gmail.com">
+                                <i class="fa-solid fa-envelope text-primary text-lg"></i>
+                                sasim4589@gmail.com
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400 text-sm">
+                            <a href="https://www.google.com/maps/place/Dari+Muhalla+Larkana,+Pakistan/@27.5473293,68.2065658,15z/data=!3m1!4b1!4m6!3m5!1s0x3935a95f908f251d:0x1fa42b287bef78a7!8m2!3d27.5473111!4d68.2168656!16s%2Fg%2F11rx212rlz?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                <i class="fa-solid fa-location-dot text-primary text-lg"></i>
+                                Larkana, Pakistan
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400 text-sm">
+                            <a href="https://wa.me/+923323230869" target="_blank">
+                                <i class="fa-brands fa-whatsapp text-primary text-lg"></i>
+                                +92 332 323 0869
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Column 4: Social Links -->
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Connect</h4>
+                    <div class="flex items-center gap-4"><a
+                            class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all"
+                            href="https://github.com/MuhammadAsim2009" target="_blank"><i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all"
+                            href="https://www.linkedin.com/in/muhammad-asim-shaikh-360946394/" target="_blank"><i class="fa-brands fa-linkedin text-xl"></i>
+                        </a>
+                        <a class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all"
+                            href="https://wa.me/+923323230869" target="_blank"><i class="fa-brands fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+                <p class="text-slate-500 text-xs">&copy; 2026 Muhammad Asim Shaikh. All Rights Reserved.</p>
+                <p class="text-slate-500 text-xs">Designed &amp; Developed with <i class="fa fa-heart text-red-500"></i> using Tailwind CSS.</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Project Modal -->
+    <div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 lg:p-10" id="project-modal">
+        <div class="absolute inset-0 bg-background-dark/90 backdrop-blur-md" id="modal-overlay"></div>
+        <div
+            class="relative w-full max-w-5xl max-h-full overflow-y-auto glass border border-primary/20 rounded-[2rem] shadow-2xl">
+            <button
+                class="absolute top-6 right-6 z-10 size-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-primary hover:text-background-dark transition-all"
+                id="close-modal"><i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="grid lg:grid-cols-2 gap-0 items-stretch">
+                <div class="h-[300px] lg:h-full bg-center bg-no-repeat bg-contain" id="modal-image"></div>
+                <div class="p-8 lg:p-12 space-y-8">
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap gap-2" id="modal-tags"></div>
+                        <h3 class="text-3xl lg:text-4xl font-black text-white" id="modal-title"></h3>
+                        <p class="text-slate-400 leading-relaxed" id="modal-desc"></p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-primary">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-3" id="modal-tech"></div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a class="flex-1 px-8 py-4 bg-primary text-background-dark font-black rounded-xl text-center hover:shadow-[0_0_20px_rgba(0,242,255,0.4)] transition-all"
+                            href="#" id="modal-live-link">Live Demo</a>
+                        <a class="flex-1 px-8 py-4 glass-card text-white font-bold rounded-xl text-center border border-white/10 hover:bg-white/5 transition-all"
+                            href="#" id="modal-repo-link">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>
