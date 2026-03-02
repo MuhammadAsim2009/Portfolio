@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             image: "img/FoodieHub.png", 
             tags: ["HTML/CSS", "JavaScript", "Bootstrap"],
             tech: ["HTML5", "CSS3", "Bootstrap", "JavaScript ES6", "Local Storage"],
-            live: "#",
+            live: "https://muhammadasim2009.github.io/FoodieHub/",
             repo: "https://github.com/MuhammadAsim2009/FoodieHub.git"
         }
     ];
