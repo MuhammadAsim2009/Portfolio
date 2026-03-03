@@ -33,6 +33,12 @@ I enjoy learning new technologies, improving my skills, and working on practical
 - Git
 - GitHub
 
+### Design Tools
+- Figma
+- Adobe Illustrator
+- Adobe Photoshop
+- Canva
+
 ---
 
 ## 📂 Featured Projects
